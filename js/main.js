@@ -2,7 +2,11 @@
 	
 	'use strict';
 
-
+	$(window).bind("pageshow", function(event) {
+        if (event.originalEvent.persisted) {
+            window.location.reload()
+        }
+    });
 
 	// iPad and iPod detection	
 	var isiPad = function(){
